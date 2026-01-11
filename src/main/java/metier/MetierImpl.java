@@ -8,11 +8,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class MetierImpl implements IMetier{
 
-    /*@Autowired*/
-    /*@Qualifier("dao2")*/ /*Qualifier above proprety works only if we use fiel injection via setter*/
+    /*@Autowired*/ /*Autowired demandes having a constructor without an arguments*/
+    /*@Qualifier("dao2")*/ /*Qualifier above proprety works only if we use field injection via setter*/
     private IDao dao;
 
-    public MetierImpl(@Qualifier("dao2")IDao dao) {
+    public MetierImpl(IDao dao) {
         this.dao = dao;
     }
 
